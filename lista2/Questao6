@@ -1,0 +1,20 @@
+public class Questao6 {
+    public static void main(String[] args) {
+        int[] lista = {4, 2, 9, 9, 7, 1};
+
+        int maior = lista[0];
+        int segundoMaior = -999999;
+
+        for (int i = 0; i < lista.length; i++) {
+            if (lista[i] > maior) {
+                segundoMaior = maior;
+                maior = lista[i];
+            } else if (lista[i] < maior && lista[i] > segundoMaior) {
+                segundoMaior = lista[i];
+            }
+        }
+
+        System.out.println("O maior número é: " + maior);
+        System.out.println("O segundo maior número é: " + segundoMaior);
+    }
+}

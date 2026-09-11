@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Questao1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite um número inteiro: ");
+        int n = sc.nextInt();
+
+        int nAbs = Math.abs(n);
+        int soma = 0;
+
+        while (nAbs > 0) {
+            soma += nAbs % 10;
+            nAbs /= 10;
+        }
+
+        System.out.println("A soma dos dígitos é: " + soma);
+    }
+}

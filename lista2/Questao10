@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Questao10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o valor a ser sacado: ");
+        int valor = sc.nextInt();
+
+        int[] cedulas = {100, 50, 20, 10, 5, 2};
+
+        System.out.println("Para sacar R$ " + valor + ", você receberá:");
+
+        for (int i = 0; i < cedulas.length; i++) {
+            int quantidade = valor / cedulas[i];
+            if (quantidade > 0) {
+                System.out.println(quantidade + " cédula(s) de R$ " + cedulas[i]);
+                valor = valor - quantidade * cedulas[i];
+            }
+        }
+
+        if (valor > 0) {
+            System.out.println("Não foi possível entregar R$ " + valor + " com as cédulas disponíveis.");
+        }
+    }
+}

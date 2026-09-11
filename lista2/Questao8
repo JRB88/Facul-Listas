@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Questao8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite um número binário: ");
+        String binario = sc.nextLine();
+
+        int decimal = 0;
+        int potencia = 1;
+
+        for (int i = binario.length() - 1; i >= 0; i--) {
+            char letra = binario.charAt(i);
+            int digito = letra - '0';
+            decimal = decimal + digito * potencia;
+            potencia = potencia * 2;
+        }
+
+        System.out.println("O valor decimal é: " + decimal);
+    }
+}

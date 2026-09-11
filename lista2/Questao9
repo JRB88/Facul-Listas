@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Questao9 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite um texto: ");
+        String texto = sc.nextLine();
+
+        String resultado = "";
+
+        for (int i = 0; i < texto.length(); i++) {
+            char letra = texto.charAt(i);
+            int codigo = (int) letra;
+
+            if (codigo >= 97 && codigo <= 122) {
+                codigo = codigo - 32;
+                letra = (char) codigo;
+            }
+
+            resultado = resultado + letra;
+        }
+
+        System.out.println("Texto em maiúsculas: " + resultado);
+    }
+}
